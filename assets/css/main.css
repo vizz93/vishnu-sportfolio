@@ -239,9 +239,13 @@ a {
 }
 
 a:hover {
-    text-decoration: line-through;
-    color: #ff594f;
+    color: #ff594f; /* Changes text color */
+    text-decoration: none; /* Ensures no underline or line-through */
+    transform: scale(1.1); /* Scales text to 110% */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
+
+
 
 a:focus {
     text-decoration: none;
@@ -1742,7 +1746,7 @@ ul {
     font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
-    color: #555;
+    color: #fff;
     padding: 5px 10px;
 }
 
@@ -2817,4 +2821,106 @@ ul {
     text-transform: uppercase;
     color: #333;
     margin-bottom: 20px;
+}
+
+.work__info {
+    text-align: center;
+    margin-top: 0px; /* Space above the text */
+    margin-bottom: 0px; /* Space below the text */
+    padding-top: 20px; /* Optional: Additional space within the box */
+    padding-bottom: 50px; /* Optional: Additional space within the box */
+    background-color: #fff; /* Ensure no background color */
+}
+
+/* Basic styling for smooth transition */
+.hoverbox img {
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+/* Zoom effect on hover */
+.hoverbox:hover img {
+    transform: scale(1.25); /* Slight zoom in */
+}
+
+/* Initial border styling */
+.grid-item {
+    border: 2px solid transparent; /* Invisible border initially */
+    transition: border 0.3s ease, transform 0.3s ease; /* Smooth transition for border and scale */
+}
+
+/* Hover effect on .grid-item */
+.grid-item:hover {
+    border: 1px solid #ff594f; /* Border color when hovering */
+    transform: scale(1.02); /* Slight scaling of the entire item */
+}
+
+/* Optional: Image zoom effect inside the hover */
+.grid-item:hover .hb_front img {
+    transform: scale(1.05); /* Zooms in image on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Text color change on hover */
+.grid-item:hover .work__title,
+.grid-item:hover .work__text {
+    color: #ff594f;
+    transition: color 0.3s ease;
+}
+
+/* Container styling */
+.reporting-tool {
+    max-width: 2000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.mda-section {
+    padding: 20px;
+    background-color: #F4F4F4; /* Optional: Light background for the section */
+    border-radius: 8px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #2980B9; /* Main heading color */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2C3E50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #34495E;
+}
+
+ul {
+    margin-top: 10px;
+    color: #34495E;
+}
+
+li {
+    margin-bottom: 8px;
 }
